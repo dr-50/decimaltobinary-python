@@ -1,0 +1,29 @@
+def decimalToBinary():   
+    binary = []
+
+    userNumber = input('Please provide a number to conver to binary: ')
+    
+    if userNumber.find('.') == -1:
+        userNumber=int(userNumber)
+    else:
+        userNumber=float(userNumber)
+        userNumber=userNumber*2
+
+    # userNumber=float(userNumber)
+    # userNumber=userNumber*2
+    # print(userNumber)
+
+    while userNumber>0:
+
+        if userNumber//2 > 0:
+            binary.append(int(userNumber%2))
+        elif userNumber//2 == 0:
+            binary.append(int(userNumber%2))
+        else:
+            binary.sort(reverse=True)
+
+        userNumber=userNumber//2
+    print(binary)
+
+
+decimalToBinary()
